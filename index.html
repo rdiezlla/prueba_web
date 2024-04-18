@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alertas de Logística</title>
+    <link rel="stylesheet" href="style.css"> <!-- Vincula el archivo CSS externo -->
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Correo</a> <!-- Se asume que index.html es la página actual de 'Enviar Alerta Logística' -->
+        <a href="formaciones.html">Formaciones</a> <!-- Enlace a la nueva página que vamos a crear -->
+    </nav>
+    <div class="container">
+        <h1>Enviar Correo</h1>
+        <form id="contact-form">
+            <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí" required></textarea>
+            <button type="button" onclick="sendToGroup('group1')">Grupo 1</button>
+            <button type="button" onclick="sendToGroup('group2')">Grupo 2</button>
+            <button type="button" onclick="sendToGroup('group3')">Grupo 3</button>
+            <input type="email" id="email" name="to_email" placeholder="Dirección de correo del destinatario" required>
+            <button type="submit">Enviar Email</button>
+        </form>
+    </div>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("9ROSnOgaRnCE4h902"); // Tu User ID de EmailJS
+        })();
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
